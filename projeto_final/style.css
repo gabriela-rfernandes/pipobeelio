@@ -1,0 +1,36 @@
+.container {
+    width: 94%;
+    min-height: 90vh;
+    margin: 30px auto;
+    background: #FFE745;
+    border-radius: 55px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hexagonos {
+    position: absolute;
+    inset: 0;
+    background-image: url("./hexagonos.svg");
+    background-repeat: repeat;
+    background-size: 55px 97px;
+    pointer-events: none;
+}
+
+.logo {
+    position: absolute;
+    width: auto;
+    height: 200px;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.beelio {
+    position: absolute;
+    width: 330px;
+    height: auto;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}

@@ -7,21 +7,122 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!--MENU-->
+    <header class="navbar" id="navbar">
+        <nav class="menu">
+            <div class="menu-esquerda">
+                <a href="#sabores">Nossos sabores</a>
+                <a href="#nossahistoria">Nossa história</a>
+            </div>
+            <a href="#inicio">
+                <img src="assets/logo.png" class="inicio">
+            </a>
+            <div>
+                <a href="#avaliacoes">Avaliações</a>
+                <a href="#contato">Contato</a>
+            </div>
+        </nav>
+    </header>
+    
     <!--HERO-->
-    <section class="hero">
+    <section class="hero" id="inicio">
         <div class="container">
+            <div class="menu-origem" id="menu-origem">
+                <nav class="menuhero">
+                    <a href="#sabores">Nossos sabores</a>
+                    <a href="#nossahistoria">Nossa História</a>
+                    <a href="#avaliacoes">Avaliações</a>
+                </nav>
+            </div>
             <div class="hexagonos"></div>
-            <img src="logo.png" class="logo">
-            <img src="beelio.png" class="beelio">
+            <img src="assets/logo.png" class="logo">
+            <img src="assets/beelio.png" class="beelio">
+            <a href="#sabores" class="sabores">Conheça nossos sabores!!!</a>
         </div>
     </section>
 
     <!--PRODUTOS-->
-    <section class="produtos">
+    <section class="produtos" id="sabores">
+        <h2 class="subtitulo"><span>N</span>ossos <span>S</span>abores</h2>
+        <div class="produtos-container">
+            <div class="produto-card">
+                <div class="produto produto-ovomaltine">
+                    <div class="produto-info">
+                        <h3>O clássico que nunca decepciona!</h3>
+                        <p>Pipoca caramelizada coberta com chocolate ao leite e finalizada com uma camada de Ovomaltine em pó.</p>
+                        <button class="carrinho">Adicionar ao carrinho</button>
+                    </div>
+                </div>
+                <h2>Ovomaltine</h2>
+            </div>
+
+            <div class="produto-card">
+                <div class="produto produto-ninho">
+                    <div class="produto-info">
+                        <h3>O sabor que conquistou gerações!</h3>
+                        <p>Pipoca caramelizada coberta com chocolate branco e finalizada com uma camada de Leite Ninho em pó.</p>
+                        <button class="carrinho">Adicionar ao carrinho</button>
+                    </div>
+                </div>
+                <h2>Leite Ninho</h2>
+            </div>
+
+            <div class="produto-card">
+                <div class="produto produto-nesquik">
+                    <div class="produto-info">
+                        <h3>Um clássico sabor de infância!</h3>
+                        <p>Pipoca caramelizada coberta com chocolate branco e finalizada com Nesquik sabor morango.</p>
+                        <button class="carrinho">Adicionar ao carrinho</button>
+                    </div>
+                </div>
+                <h2>Bicho de Pé</h2>
+            </div>
+
+            <div class="produto-card">
+                <div class="produto produto-pacoca">
+                    <div class="produto-info">
+                        <h3>O gostinho brasileiro que todo mundo ama!</h3>
+                        <p>Pipoca caramelizada coberta com chocolate branco e finalizada com paçoca triturada.</p>
+                        <button class="carrinho">Adicionar ao carrinho</button>
+                    </div>
+                </div>
+                <h2>Paçoca</h2>
+            </div>
+
+            <div class="produto-card">
+                <div class="produto produto-oreo">
+                    <div class="produto-info">
+                        <h3>Chocolate branco e Oreo: não tem erro!</h3>
+                        <p>Pipoca caramelizada coberta com chocolate branco e finalizada com Oreo triturada.</p>
+                        <button class="carrinho">Adicionar ao carrinho</button>
+                    </div>
+                </div>
+                <h2>Cookies & Cream</h2>
+            </div>
+
+            <div class="produto-card">
+                <div class="produto produto-caramelo">
+                    <div class="produto-info">
+                        <h3>O equilíbrio perfeito entre doce e salgado!</h3>
+                        <p>Pipoca caramelizada envolvida em uma camada de caramelo salgado.</p>
+                        <button class="carrinho">Adicionar ao carrinho</button>
+                    </div>
+                </div>
+                <h2>Caramelo Salgado</h2>
+            </div>
+        </div>
     </section>
 
     <!--NOSSA HISTÓRIA-->
-    <section class="linhadotempo">
+    <section class="historia" id="nossahistoria">
+        <h2 class="subtitulo"><span>N</span>ossa <span>H</span>istória</h2>
     </section>
+
+    <!--AVALIAÇÕES-->
+
+    <!--RODAPÉ-->
+
+<script src="script.js"></script>
 </body>
 </html>

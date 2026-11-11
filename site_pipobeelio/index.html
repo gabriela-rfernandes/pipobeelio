@@ -21,7 +21,7 @@
             <div class="menu-direita">
                 <a href="#avaliacoes">Avaliações</a>
                 <a href="#contato">Contato</a>
-                <img src="assets/carrinhoamarelo.svg" class="cart">
+                <img src="assets/carrinhoamarelo.svg" class="cart" id="abrir-carrinho" alt="Abrir carrinho">
             </div>
         </nav>
     </header>
@@ -45,7 +45,6 @@
             <div class="hero-texto">
                 <h3>Uma origem cheia de sabor.</h3>
                 <h4>Um futuro sem limites.</h4>
-                
             </div>
             <a href="#sabores" class="sabores">Conheça nossos sabores!!!</a>
         </div>
@@ -60,7 +59,7 @@
                     <div class="produto-info">
                         <h3>O clássico que nunca decepciona!</h3>
                         <p>Pipoca caramelizada coberta com chocolate ao leite e finalizada com uma camada de Ovomaltine em pó.</p>
-                        <button class="carrinho">Adicionar ao carrinho</button>
+                        <button class="carrinho" data-nome="Ovomaltine" data-preco="15">Adicionar ao carrinho</button>
                     </div>
                 </div>
                 <h2>Ovomaltine</h2>
@@ -71,10 +70,10 @@
                     <div class="produto-info">
                         <h3>O sabor que conquistou gerações!</h3>
                         <p>Pipoca caramelizada coberta com chocolate branco e finalizada com uma camada de Leite Ninho em pó.</p>
-                        <button class="carrinho">Adicionar ao carrinho</button>
+                        <button class="carrinho" data-nome="Leite Ninho" data-preco="15">Adicionar ao carrinho</button>
                     </div>
                 </div>
-                <h2>Leite Ninho</h2>
+                <h2>Leite Ninho</h2> 
             </div>
 
             <div class="produto-card">
@@ -82,7 +81,7 @@
                     <div class="produto-info">
                         <h3>Um clássico sabor de infância!</h3>
                         <p>Pipoca caramelizada coberta com chocolate branco e finalizada com Nesquik sabor morango.</p>
-                        <button class="carrinho">Adicionar ao carrinho</button>
+                        <button class="carrinho" data-nome="Bicho de Pé" data-preco="15">Adicionar ao carrinho</button>
                     </div>
                 </div>
                 <h2>Bicho de Pé</h2>
@@ -93,7 +92,7 @@
                     <div class="produto-info">
                         <h3>O gostinho brasileiro que todo mundo ama!</h3>
                         <p>Pipoca caramelizada coberta com chocolate branco e finalizada com paçoca triturada.</p>
-                        <button class="carrinho">Adicionar ao carrinho</button>
+                        <button class="carrinho" data-nome="Paçoca" data-preco="15">Adicionar ao carrinho</button>
                     </div>
                 </div>
                 <h2>Paçoca</h2>
@@ -104,7 +103,7 @@
                     <div class="produto-info">
                         <h3>Chocolate branco e Oreo: não tem erro!</h3>
                         <p>Pipoca caramelizada coberta com chocolate branco e finalizada com Oreo triturada.</p>
-                        <button class="carrinho">Adicionar ao carrinho</button>
+                        <button class="carrinho" data-nome="Cookies & Cream" data-preco="15">Adicionar ao carrinho</button>
                     </div>
                 </div>
                 <h2>Cookies & Cream</h2>
@@ -115,7 +114,7 @@
                     <div class="produto-info">
                         <h3>O equilíbrio perfeito entre doce e salgado!</h3>
                         <p>Pipoca caramelizada envolvida em uma camada de caramelo salgado.</p>
-                        <button class="carrinho">Adicionar ao carrinho</button>
+                        <button class="carrinho" data-nome="Caramelo Salgado" data-preco="15">Adicionar ao carrinho</button>
                     </div>
                 </div>
                 <h2>Caramelo Salgado</h2>
@@ -125,12 +124,99 @@
 
     <!--NOSSA HISTÓRIA-->
     <section class="historia" id="nossahistoria">
-        <h2 class="subtitulo"><span>N</span>ossa <span>H</span>istória</h2>
+        <h2 class="subtitulo">
+            <span>N</span>ossa <span>H</span>istória
+        </h2>
     </section>
 
     <!--AVALIAÇÕES-->
+    <section class="avaliacoes" id="avaliacoes">
+        <h2 class="subtitulo"><span>A</span>valiações</h2>
+        <div class="avaliacoes-conteudo">
+            <div class="instagram-card">
+                <div class="instagram-header">
+                    <img src="assets/fotoperfil.jpg" alt="Pipobeelio">
+                    <a href="https://www.instagram.com/pipobeelio/" class="instagram-user">
+                        <strong>@pipobeelio</strong>
+                        <span>Instagram</span>
+                    </a>
+                    <span class="insta-dots">•••</span>
+                </div>
+                <a href="https://www.instagram.com/p/DYnxWpSN20g/" target="_blank">
+                    <video class="instagram-video" autoplay muted loop playsinline controls>
+                    <source src="assets/videoprofessores.mp4" type="video/mp4">
+                    </video>
+                </a>
+                <div class="instagram-footer">
+                    <p><strong>@pipobeelio</strong> 
+                        Confira nossa publicação no Instagram!<br>
+                    </p>
+                    <a href="https://www.instagram.com/p/DYnxWpSN20g/" target="_blank">
+                        Ver publicação →
+                    </a>
+                </div>
+            </div>
+            <div class="avaliacoes-texto">
+                <h3>Quem provou, aprovou!</h3>
+                <p>Não precisa acreditar só na nossa palavra. Confira a opinião de quem já experimentou!</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="carrinho-overlay" id="carrinho-overlay"></div>
+
+    <aside class="carrinho-painel" id="carrinho-painel" aria-hidden="true">
+        <div class="carrinho-header">
+            <h2>Meu carrinho</h2>
+            <button class="fechar-carrinho" id="fechar-carrinho" aria-label="Fechar carrinho"> 
+                &times;
+            </button>
+        </div>
+        <div class="carrinho-itens" id="carrinho-itens">
+            <p class="carrinho-vazio">
+                Seu carrinho está vazio.
+            </p>
+        </div>
+        <div class="carrinho-footer">
+            <div class="carrinho-total">
+                <span>Total:</span>
+                <strong id="carrinho-total">R$ 0,00</strong>
+            </div>
+            <button class="finalizar-pedido">
+                Finalizar pedido
+            </button>
+        </div>
+    </aside>
 
     <!--RODAPÉ-->
+    <footer class="rodape" id="contato">
+            <div class="rodape-conteudo">
+                <div class="rodape-topo">
+                    <div class="rodape-marca">
+                        <img src="assets/fotoperfil.jpg">
+                        <h3>Pipobeelio</h3>
+                    </div>
+                    <p class="rodape-frase">Da feira para a tela</p>
+                </div>
+                <div class="rodape-colunas">
+                    <div class="rodape-links">
+                        <h4>Navegação</h4>
+                        <a href="#inicio">Início</a>
+                        <a href="#sabores">Nossos sabores</a>
+                        <a href="#nossahistoria">Nossa história</a>
+                        <a href="#avaliacoes">Avaliações</a>
+                    </div>
+                    <div class="rodape-contato">
+                        <h4>Contato</h4>
+                        <a href="https://www.instagram.com/pipobeelio/">Instagram</a>
+                        <a>Fale conosco</a>
+                    </div>
+                </div>
+                <div class="rodape-final">
+                    <p>© 2026 Pipobeelio. Todos os direitos reservados.</p>
+                </div>
+            </div>
+    </footer>
 
 <script src="script.js"></script>
 </body>

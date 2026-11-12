@@ -165,3 +165,84 @@ areaItens.addEventListener("click", event => {
 });
 
 atualizarCarrinho();
+
+//HISTÓRIA
+const etapasHistoria = [
+    {
+        titulo: "O começo",
+        descricao: "A Pipobeelio nasce como um projeto de empreendedorismo escolar.",
+        imagem: "assets/historia-1.png"
+    },
+    {
+        titulo: "A ideia",
+        descricao: "Transformar um produto simples em uma experiência diferente através de pipocas gourmet, sabores diferenciados e uma identidade própria.",
+        imagem: "assets/historia-2.jpg"
+    },
+    {
+        titulo: "A produção",
+        descricao: "A equipe desenvolveu os produtos, a identidade visual, a comunicação e preparou a marca para a feira.",
+        imagem: "assets/historia-3.jpg"
+    },
+    {
+        titulo: "A feira",
+        descricao: "A Pipobeelio foi colocada à prova diante de clientes reais.",
+        imagem: "assets/historia-4.jpg"
+    },
+    {
+        titulo: "O resultado",
+        descricao: "Os produtos tiveram grande procura, esgotando rapidamente, e a barraca alcançou um alto rendimento na feira.",
+        imagem: "assets/historia-5.jpg"
+    },
+    {
+        titulo: "O próximo passo",
+        descricao: "A partir dessa experiência, a marca é transformada em uma experiência digital.",
+        imagem: "assets/historia-6.png"
+    }
+];
+
+const secaoHistoria = document.querySelector(".historia-scroll");
+const tituloHistoria = document.querySelector(".historia-titulo");
+const descricaoHistoria = document.querySelector(".historia-descricao");
+const imagemHistoria = document.querySelector(".historia-imagem img");
+const numeroHistoria = document.querySelector(".historia-etapa");
+const linhaHistoria = document.querySelector(".historia-linha-preenchida");
+const pontosHistoria = document.querySelectorAll(".historia-pontos span");
+
+let etapaAtual = -1;
+
+function atualizarHistoria() {
+
+    const inicio = secaoHistoria.getBoundingClientRect().top + window.scrollY;
+    const distancia = secaoHistoria.offsetHeight - window.innerHeight;
+
+    const progresso = Math.max(0, Math.min(1,
+        (window.scrollY - inicio) / distancia
+    ));
+
+    const indice = Math.min(5, Math.floor(progresso * 6));
+
+    // Atualiza o conteúdo somente quando a etapa muda
+    if (indice !== etapaAtual) {
+
+        etapaAtual = indice;
+
+        const etapa = etapasHistoria[indice];
+
+        tituloHistoria.textContent = etapa.titulo;
+        descricaoHistoria.textContent = etapa.descricao;
+        imagemHistoria.src = etapa.imagem;
+        numeroHistoria.textContent = `0${indice + 1} / 06`;
+
+        linhaHistoria.style.width = `${(indice / 5) * 100}%`;
+    }
+
+    // Atualiza os números em toda rolagem
+    pontosHistoria.forEach((ponto, i) => {
+        ponto.classList.toggle("ativo", i === indice);
+    });
+}
+
+window.addEventListener("scroll", atualizarHistoria);
+window.addEventListener("resize", atualizarHistoria);
+
+atualizarHistoria();

@@ -448,7 +448,144 @@ header {
 /*NOSSA HISTÓRIA*/
 .historia h2 {
     margin-top: 60px;
-    margin-bottom: 17px;
+    margin-bottom: 1px;
+}
+
+.historia-scroll {
+    height: 600vh;
+    position: relative;
+}
+
+.historia-sticky {
+    height: 100vh;
+    position: sticky;
+    top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.historia-card {
+    width: 100%;
+    max-width: 1050px;
+    min-height: 420px;
+    background-color: #FFEAB3;
+    border-radius: 24px;
+    padding: 55px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 45px;
+    position: relative;
+    align-items: center;
+    top: -80px;
+}
+
+.historia-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.historia-etapa {
+    font-size: 13px;
+    font-weight: 700;
+    color: #B77A35;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.historia-titulo {
+    font-size: 38px;
+    color: #4B2918;
+    margin-bottom: 18px;
+}
+
+.historia-descricao {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #74533D;
+    max-width: 390px;
+}
+
+.historia-imagem {
+    width: auto;
+    height: 400px;
+    overflow: hidden;
+    margin-left: 50px;
+}
+
+.historia-imagem img {
+    max-width: auto;
+    max-height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.3s ease;
+    border-radius: 34px
+}
+
+.historia-progresso {
+    grid-column: 1 / -1;
+    margin-top: 45px;
+}
+
+.historia-linha {
+    height: 3px;
+    background-color: #E6D7BD;
+    border-radius: 10px;
+    position: relative;
+}
+
+.historia-linha-preenchida {
+    width: 0%;
+    height: 100%;
+    background-color: #D99A35;
+    border-radius: 10px;
+    transition: width 0.4s ease;
+}
+
+.historia-pontos {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+}
+
+.historia-pontos span {
+    font-size: 12px;
+    font-weight: 600;
+    color: #B9A58A;
+    transition: color 0.3s ease;
+}
+
+.historia-pontos span.ativo {
+    color: #A86425;
+}
+
+@media (max-width: 700px) {
+
+    .historia-card {
+        padding: 25px;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        min-height: auto;
+    }
+
+    .historia-titulo {
+        font-size: 29px;
+    }
+
+    .historia-descricao {
+        font-size: 15px;
+    }
+
+    .historia-imagem {
+        height: 190px;
+    }
+
+    .historia-progresso {
+        margin-top: 15px;
+    }
+
 }
 
 /*AVALIAÇÕES*/

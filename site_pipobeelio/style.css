@@ -490,29 +490,38 @@ header {
 .historia-etapa {
     font-size: 13px;
     font-weight: 700;
-    color: #B77A35;
+    color: #FFDE00;
     letter-spacing: 2px;
     margin-bottom: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .historia-titulo {
     font-size: 38px;
-    color: #4B2918;
+    color: #92552B;
     margin-bottom: 18px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
 }
 
 .historia-descricao {
     font-size: 17px;
     line-height: 1.7;
-    color: #74533D;
+    color: #4B2918;
     max-width: 390px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .historia-imagem {
     width: auto;
     height: 400px;
     overflow: hidden;
-    margin-left: 50px;
+    margin-left: 100px;
 }
 
 .historia-imagem img {
@@ -548,6 +557,9 @@ header {
     display: flex;
     justify-content: space-between;
     margin-top: 12px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .historia-pontos span {
@@ -589,6 +601,10 @@ header {
 }
 
 /*AVALIAÇÕES*/
+.avaliacoes h2 {
+    margin-top: -100px;
+}
+
 .instagram-card {
     width: 230px;
     background: #fff;
@@ -597,6 +613,7 @@ header {
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
     font-family: Arial, sans-serif;
     margin-left: 7vw;
+    margin-bottom: 60px;
 }
 
 .instagram-header {

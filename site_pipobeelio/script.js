@@ -175,7 +175,7 @@ const etapasHistoria = [
     },
     {
         titulo: "A ideia",
-        descricao: "Transformar um produto simples em uma experiência diferente através de pipocas gourmet, sabores diferenciados e uma identidade própria.",
+        descricao: "Transformar um produto simples em uma experiência diferente através de sabores únicos e uma identidade própria.",
         imagem: "assets/historia-2.jpg"
     },
     {

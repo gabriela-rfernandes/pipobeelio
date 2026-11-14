@@ -176,12 +176,12 @@ const etapasHistoria = [
     {
         titulo: "A ideia",
         descricao: "Transformar um produto simples em uma experiência diferente através de sabores únicos e uma identidade própria.",
-        imagem: "assets/historia-2.jpg"
+        imagem: "assets/historia-2.webp"
     },
     {
         titulo: "A produção",
         descricao: "A equipe desenvolveu os produtos, a identidade visual, a comunicação e preparou a marca para a feira.",
-        imagem: "assets/historia-3.jpg"
+        imagem: "assets/historia-3.webp"
     },
     {
         titulo: "A feira",

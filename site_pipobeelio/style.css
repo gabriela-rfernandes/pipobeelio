@@ -373,27 +373,27 @@ header {
 }
 
 .produto.produto-ovomaltine {
-    background-image: url(assets/ovomaltine.png);
+    background-image: url(assets/ovomaltine.webp);
 }
 
 .produto.produto-ninho {
-    background-image: url(assets/ninho.png);
+    background-image: url(assets/ninho.webp);
 }
 
 .produto.produto-nesquik {
-    background-image: url(assets/nesquik.png);
+    background-image: url(assets/nesquik.webp);
 }
 
 .produto.produto-pacoca {
-    background-image: url(assets/paçoca.png);
+    background-image: url(assets/paçoca.webp);
 }
 
 .produto.produto-oreo {
-    background-image: url(assets/oreo.png);
+    background-image: url(assets/oreo.webp);
 }
 
 .produto.produto-caramelo {
-    background-image: url(assets/caramelo.png);
+    background-image: url(assets/caramelo.webp);
 }
 
 .carrinho {
@@ -487,17 +487,6 @@ header {
     justify-content: center;
 }
 
-.historia-etapa {
-    font-size: 13px;
-    font-weight: 700;
-    color: #FFDE00;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
 .historia-titulo {
     font-size: 38px;
     color: #92552B;
@@ -545,13 +534,6 @@ header {
     position: relative;
 }
 
-.historia-linha-preenchida {
-    width: 0%;
-    height: 100%;
-    background-color: #D99A35;
-    border-radius: 10px;
-    transition: width 0.4s ease;
-}
 
 .historia-pontos {
     display: flex;
@@ -570,7 +552,7 @@ header {
 }
 
 .historia-pontos span.ativo {
-    color: #A86425;
+    color: #4B2918;
 }
 
 @media (max-width: 700px) {
@@ -603,6 +585,7 @@ header {
 /*AVALIAÇÕES*/
 .avaliacoes h2 {
     margin-top: -100px;
+    margin-left: 14%;
 }
 
 .instagram-card {
@@ -614,6 +597,7 @@ header {
     font-family: Arial, sans-serif;
     margin-left: 7vw;
     margin-bottom: 60px;
+    margin-left: 13%;
 }
 
 .instagram-header {
@@ -688,6 +672,7 @@ header {
     flex: 1;
     font-family: "Poppins", sans-serif;
     font-style: normal;
+    margin-top: -100px;
 }
 
 .avaliacoes-texto h3 {
@@ -695,12 +680,28 @@ header {
     font-size: 30px;
     padding-bottom: 0px;
     color: #92552B;
+    margin-left: 2%;
+    margin-bottom: 0%;
 }
 
-.avaliacoes-texto p {
+.avaliacoes-paragrafo {
     font-weight: 400;
     font-size: 15px;
     color: #4B2918;
+    background-color: #FFEAB3;
+    text-align: start;
+    width: 70%;
+    padding: 40px;
+    border-radius: 34px;
+}
+
+.p1-avaliacoes {
+    border-bottom: 1px solid #4B2918;
+    padding-bottom: 10px;
+}
+
+.p2-avaliacoes {
+    font-weight: 500;
 }
 
 /*CARRINHO*/
